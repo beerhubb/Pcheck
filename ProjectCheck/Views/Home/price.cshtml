@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ProjectCheck.Models.insertdata>
+
+@{
+    ViewData["Title"] = "price";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="cars-section area-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 site-heading ">
+                <h2>ราคาชิ้นส่วนอะไหล่ปัจจุบัน</h2>
+                <p> </p>
+                <div class="divider"></div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-6 col-md-3 text-center">
+                    <div class="used-cars-box">
+                        <div class="used-cars-img">
+                            <img class="img-responsive col-md-12" src="@Html.DisplayFor(model => item.pictrue)">
+                        </div>
+                        <div class="used-cars-title">
+                            <h3><b>@Html.DisplayFor(model => item.name)</b></h3>
+                            <h4>@Html.DisplayFor(model => item.detail)</h4>
+                            <h4>ราคา : @Html.DisplayFor(model => item.price)</h4>
+                        </div>
+                        @Html.ActionLink("รายละเอียด", "detail", new { id = item._id }, new { @class = "btn btn-warning" })
+                    </div>
+                </div> <!-- End Col -->
+
+            }
+        </div>
+    </div>
+</div>

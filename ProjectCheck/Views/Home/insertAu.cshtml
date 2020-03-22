@@ -1,0 +1,39 @@
+﻿@model ProjectCheck.Models.AddAu
+
+@{
+    ViewData["Title"] = "insertAu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>เพิ่มข้อมูล</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="insertAu">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="address" class="control-label"></label>
+                <input asp-for="address" class="form-control" />
+                <span asp-validation-for="address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="phon" class="control-label"></label>
+                <input asp-for="phon" class="form-control" />
+                <span asp-validation-for="phon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="เพิ่ม" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

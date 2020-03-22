@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ProjectCheck.Models.AddAu>
+
+@{
+    ViewData["Title"] = "address";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid mt-3">
+    <div class="cars-section area-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 site-heading ">
+                    <h2>อู่ในพื้นที่ศรีสะเกษ</h2>
+                    <div class="divider"></div>
+                </div>
+            </div>
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-sm-6 col-md-3 text-center">
+                        <div class="used-cars-box">
+                            <div class="used-cars-title">
+                                <h3><b>@Html.DisplayFor(model => item.name)</b></h3>
+                                <h4>@Html.DisplayFor(model => item.address)</h4>
+                                <h4>ราคา : @Html.DisplayFor(model => item.phon)</h4>
+                            </div>
+                            @Html.ActionLink("รายละเอียด", "det", new { id = item._id }, new { @class = "btn btn-warning" })
+                        </div>
+                    </div> <!-- End Col -->
+                }
+            </div>
+        </div>
+    </div>
+</div>

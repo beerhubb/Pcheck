@@ -1,0 +1,32 @@
+﻿@model ProjectCheck.Models.AddAu
+
+@{
+    ViewData["Title"] = "det";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>อู่ที่ร่วมรายการ</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.address)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.address)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.phon)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.phon)
+        </dd>
+    </dl>
+</div>
