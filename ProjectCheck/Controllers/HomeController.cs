@@ -25,9 +25,13 @@ namespace ProjectCheck.Controllers
 
         public IActionResult Index()
         {
-            var item = insertCollection.Find(it => true).ToList();
+            var item1 = insertCollection.Find(it => it.status == "1").ToList();
+            var item2 = insertCollection.Find(it => it.status == "2").ToList();
+            var qryitem1 = item1.TakeLast(9);
+            var qryitem2 = item2.TakeLast(9);
+            var union = qryitem1.Union(qryitem2);
 
-            return View(item);
+            return View(union);
         }
 
         public IActionResult detail(string id)
@@ -56,16 +60,6 @@ namespace ProjectCheck.Controllers
             var item = AuCollection.Find(it => it._id == id).FirstOrDefault();
 
             return View(item);
-        }
-
-        public IActionResult contact()
-        {
-            return View();
-        }
-
-        public IActionResult about()
-        {
-            return View();
         }
 
         public IActionResult Login()

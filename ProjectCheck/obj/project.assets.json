@@ -9861,11 +9861,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\PROGRAM_D\\งาน\\ProjectCheck\\ProjectCheck\\ProjectCheck.csproj",
+      "projectUniqueName": "C:\\PROGRAM_D\\งาน\\Pcheck\\ProjectCheck\\ProjectCheck.csproj",
       "projectName": "ProjectCheck",
-      "projectPath": "C:\\PROGRAM_D\\งาน\\ProjectCheck\\ProjectCheck\\ProjectCheck.csproj",
+      "projectPath": "C:\\PROGRAM_D\\งาน\\Pcheck\\ProjectCheck\\ProjectCheck.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "C:\\PROGRAM_D\\งาน\\ProjectCheck\\ProjectCheck\\obj\\",
+      "outputPath": "C:\\PROGRAM_D\\งาน\\Pcheck\\ProjectCheck\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
